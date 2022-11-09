@@ -1,8 +1,8 @@
-def chessboard(n):
+def chessboard(n,k):
     for i in range(n):
-        for i in range(1,2):
-            print((" "+"##")*4)
-        for i in range(3,4):
-            print(("##"+" ")*4)
-
-chessboard(8)
+        for i in range(k):
+            print((k * " " + k * "#") * n)
+        for i in range(k):
+            print((k * "#" + k * " ") * n)
+          
+chessboard(4,5)
