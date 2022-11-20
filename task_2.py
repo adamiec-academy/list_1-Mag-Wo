@@ -1,4 +1,4 @@
-def chessboard(n, k):
+def chess_board(n, k):
 
     for i in range(n):
         for _ in range(k):
