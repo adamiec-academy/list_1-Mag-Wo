@@ -1,12 +1,18 @@
 def snowball(n,k):
 
-    for i in range(2,8,2):
-        print(k*" "+(n-i-1)//2 * " " +(i+1)*"#")
-    print(k*" "+ "#"*n)
-    for i in range(2,8,2):
-        print(k*" "+((2*(i+n)//(n//2))-6) * " "+ (n-i+2)*"#")
+    offset = 0.5
+    ray = n/2
 
-snowball(7,10)
+    for x in range(n):
+        print(k*" ", end="")
+        for y in range(n):
+            if (x + offset - ray)**2 + (y + offset - ray)**2 <= ray **2:
+                print("#", end="")
+            else:
+                print(" ", end="")
+        print()
 
 def snowman(n):
-    pass
+    snowball(n,2)
+    snowball(n+2,1)
+    snowball(n+4,0)
