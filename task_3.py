@@ -1,10 +1,14 @@
-def envelope(n,x):
-    print("*"*n)
-    for i in range(x):
-        print("*"+(i*" ")+"*"+(n//2 + 1 - 2*i) * " " + "*" + i * " " + "*")
-    print("*"+(" "*x)+"*"+(" "*x)+"*")
-    for i in range(x):
-        print("*"+((x-i-1)*" ")+"*"+(2*i+1)*" "+"*"+((x-i-1)*" ")+"*")
-    print("*"*n)
+def envelope(n):
+    print((2*n+1)*"*")
 
-envelope(9,3)
+    for i in range(n-1):
+        print("*" + i * " " + "*" + (2*n-3-2*i) * " " + "*" + i * " " + "*")
+
+    print("*" + (n-1) * " " + "*" + (n-1) * " " + "*")
+
+    for i in range(n-1):
+        print("*" + (n-2-i) * " " + "*" + (2*i+1) * " " + "*" + (n-2-i) * " " + "*")
+
+    print((2*n+1)*"*")
+
+envelope(4)
